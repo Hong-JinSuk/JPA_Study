@@ -14,8 +14,13 @@
             <!-- 옵션 -->
             <property name="hibernate.show_sql" value="true"/>
             <property name="hibernate.format_sql" value="true"/>
-            <property name="hibernate.use_sql_comments"  value="true"/>
-<!--            <property name="hibernate.hbm2ddl.auto" value="create" />-->
+            <property name="hibernate.use_sql_comments" value="true"/>
+            <!-- 개발 초기 단계는 아래 옵션들도 쓸 수 있지만, 🚨운영 장비에는 절대 사용하면 안된다. 데이터가 중요하기 때문이다. -->
+            <!--            <property name="hibernate.hbm2ddl.auto" value="create"/> &lt;!&ndash; 기존 table 삭제 후 생성 &ndash;&gt;-->
+            <!--            <property name="hibernate.hbm2ddl.auto" value="create-drop" /> create-drop은 Application이 끝날 때, 테이블을 삭제한다. -->
+            <!--            <property name="hibernate.hbm2ddl.auto" value="update" /> update 는 테이블의 열을 추가해줄 수 있다. 삭제는 불가능 -->
+            <!--            <property name="hibernate.hbm2ddl.auto" value="validate" /> entity 와 table 이 정상매핑 되었는지 확인하는 용도 -->
+            <!--            <property name="hibernate.hbm2ddl.auto" value="none" /> 아무 옵션 X -->
         </properties>
     </persistence-unit>
 
